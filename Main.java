@@ -1,11 +1,16 @@
 public class Main {
 
-    public static void Print(){
-        System.out.println("Hi this is me");
-    }
+    
     public static void main(String[] args) {
-        Print();
-        }
+for(int i = 0 ; i<4 ; i++){
+    for(int j= 0 ; j<5 ; j++){
+        System.out.print( "x");
+    }
+    System.out.println("");
+
+}
+
+    }
 
 
 }
