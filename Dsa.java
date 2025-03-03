@@ -1,15 +1,24 @@
 public class Dsa {
- public static void Printa(int  n ) {
-    int multiply  = n;
-    if( n ==0 ){return  ;};
-    Printa(  multiply * (n-1));
+    // Function to check if a string is a palindrome
+    public static boolean Ispalindrome(String str) {
+        int left = 0, right = str.length() - 1;
+
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false; // Not a palindrome
+            }
+            left++;
+            right--;
+        }
+        return true; // It is a palindrome
+    }
+
+    public static void main(String[] args) {
+        String str = "racecar";
+        if (Ispalindrome(str)) {
+            System.out.println(str + " is a palindrome.");
+        } else {
+            System.out.println(str + " is not a palindrome.");
+        }
+    }
 }
-public static void main(String[] args) {
-    System.out.println("This is string");
-
-    Printa(5);
-}
-
-
-}
-
