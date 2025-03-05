@@ -1,15 +1,26 @@
 public class Dsa {
-    // Recursive function to print the array in reverse order
-    public static void reverseArray(int[] arr, int index) {
-        if (index < 0) {
-            return; // Base case: stop when index is out of bounds
+    public static void SortString(String arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j].compareTo(arr[j + 1]) > 0) {
+                    // Swap arr[j] and arr[j + 1]
+                    String temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
         }
-        System.out.print(arr[index] + " "); // Print the current element
-        reverseArray(arr, index - 1); // Recursive call for the previous index
     }
 
     public static void main(String[] args) {
-        int arr[] = {1, 2, 3, 4};
-        reverseArray(arr, arr.length - 1); // Start from the last index
+        String arr[] = {"Banana", "Orange", "Apple", "Mango"};
+        
+        SortString(arr); // Sort the array manually
+
+        System.out.println("Sorted Array: ");
+        for (String str : arr) {
+            System.out.print(str + " ");
+        }
     }
 }
