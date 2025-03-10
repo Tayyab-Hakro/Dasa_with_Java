@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-//Reverse the String in java
+//Write  a function in java or other language 
     public static void main(String[] args) {
        
     }
